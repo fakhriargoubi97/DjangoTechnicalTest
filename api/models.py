@@ -14,6 +14,8 @@ class Label(models.Model):
 
 class Annotation(models.Model):
     document = models.ForeignKey(Document, on_delete=models.CASCADE)
+    # document_id = models.IntegerField()
+    # label_id = models.IntegerField()
     start = models.IntegerField()
     end = models.IntegerField()
     label = models.ForeignKey(Label, on_delete=models.CASCADE)
